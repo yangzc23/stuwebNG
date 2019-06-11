@@ -31,8 +31,6 @@
 
 9）表单校验的JS功能（未完成）
 
-### 项目地址
-[https://github.com/yangzc23/stuwebNG](https://github.com/yangzc23/stuwebNG)
 ### 思路
 1）HttpServlet的作用：对http请求进行处理（service方法）
 
