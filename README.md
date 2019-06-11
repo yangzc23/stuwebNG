@@ -40,6 +40,8 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/10027900-1d46b5f8c57b49a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+![image.png](https://upload-images.jianshu.io/upload_images/10027900-185fa5592e170450.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ![image.png](https://upload-images.jianshu.io/upload_images/10027900-7ceea08a7792e9df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![image.png](https://upload-images.jianshu.io/upload_images/10027900-699c2905e14b4882.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -58,6 +60,8 @@ PHOTO_URL VARCHAR(50)	--照片路径
 **描述：**
 
 访问网站首页报404错误
+
+![image.png](https://upload-images.jianshu.io/upload_images/10027900-e3a16642a128e4e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **分析：**
 
