@@ -1,4 +1,4 @@
-function queryAll(){
+function list(){
 	$.ajax({
 		type: "get",
 		url: "welcome",
@@ -84,7 +84,7 @@ function save(){
                     $("#register")[0].reset();
                     $("#photo2").attr("src","images/default.png");
                     //alert(data.message);
-                    queryAll();
+                    list();
                 }
             },
             error : function() {
@@ -127,7 +127,7 @@ function del(e){
             success: function (data) {
                 console.log(data.message);//打印服务端返回的数据(调试用)
                 if (data.result == "success") {
-                    queryAll();
+                    list();
                 }
             },
             error : function() {
