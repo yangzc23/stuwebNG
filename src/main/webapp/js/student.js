@@ -11,9 +11,9 @@ function queryAll(){
 			$.each(data.data,function(index,obj){
 				html += "<tr><td>"+obj.sno+"</td><td>"+obj.sname+
 				"</td><td>"+obj.isMale+"</td><td>"+obj.birth+"</td><td>"+
-				"<a href=\"javascript:void(0)\" onclick=\"detail();\">详情</a>&nbsp;"+
+				"<a href=\"javascript:void(0)\" onclick=\"detail(this);\">详情</a>&nbsp;"+
 				"<a href=\"javascript:void(0)\" onclick=\"edit(this);\">编辑</a>&nbsp;"+
-				"<a href=\"javascript:void(0)\" onclick=\"del();\">删除</a>"+				
+				"<a href=\"javascript:void(0)\" onclick=\"del(this);\">删除</a>"+				
 				"</td></tr>";
 			});
 			html += "</table>";
@@ -113,4 +113,26 @@ function upload(){
 			console.log("hello test");
 		}
 	});
+}
+
+function del(e){
+    var sid = $(e).parent().siblings().first().text();
+    var yesOrNo = confirm("确定要删除该学生么？");
+    if(yesOrNo){
+        $.ajax({
+            //几个参数需要注意一下
+            type: "GET",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "delete?sid="+sid ,//url
+            success: function (data) {
+                console.log(data.message);//打印服务端返回的数据(调试用)
+                if (data.result == "success") {
+                    queryAll();
+                }
+            },
+            error : function() {
+                alert("异常！");
+            }
+        }); 
+    }
 }
