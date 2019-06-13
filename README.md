@@ -31,6 +31,8 @@
 
 9）表单校验的JS功能（未完成）
 
+![image.png](https://upload-images.jianshu.io/upload_images/10027900-736d126c6bfca41c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ### 思路
 1）HttpServlet的作用：对http请求进行处理（service方法）
 
