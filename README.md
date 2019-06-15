@@ -40,13 +40,13 @@
 
 3）HttpServletResponse表示响应（发送响应数据给浏览器）
 
-![image.png](https://upload-images.jianshu.io/upload_images/10027900-1d46b5f8c57b49a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 ![image.png](https://upload-images.jianshu.io/upload_images/10027900-d9dbf5ac50bd7aa7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![image.png](https://upload-images.jianshu.io/upload_images/10027900-ecff5a9065f3a48e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![image.png](https://upload-images.jianshu.io/upload_images/10027900-a985fa10bac75ed9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![image.png](https://upload-images.jianshu.io/upload_images/10027900-699c2905e14b4882.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 创建学生表
 ```
