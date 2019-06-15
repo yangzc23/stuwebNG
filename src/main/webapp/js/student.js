@@ -6,8 +6,10 @@ function list(){
 		async: true,
 		dataType: "json",
 		success: function(data){
-			var html = "<table width=\"70%\" border=\"1\">"
-			html += "<tr><th>学号</th><th>姓名</th><th>性别</th><th>生日</th><th>操作</th></tr>"
+			var html = "<div class=\"panel-heading\"><h3 class=\"panel-title\">学生列表</h3></div>";
+			html += "<div><p></p></div>";
+			html += "<table class=\"table table-hover\">";
+			html += "<tr><th>学号</th><th>姓名</th><th>性别</th><th>生日</th><th>操作</th></tr>";
 			$.each(data.data,function(index,obj){
 				html += "<tr><td>"+obj.sno+"</td><td>"+obj.sname+
 				"</td><td>"+obj.isMale+"</td><td>"+obj.birth+"</td><td>"+
@@ -73,7 +75,7 @@ function cancel(){
 function save(){
     $.ajax({
         	//几个参数需要注意一下
-            type: "POST",//方法类型
+            type: "post",//方法类型
             dataType: "json",//预期服务器返回的数据类型
             url: "save" ,//url
             data: $("#register").serialize(),
@@ -116,23 +118,23 @@ function upload(){
 }
 
 function del(e){
-    var sid = $(e).parent().siblings().first().text();
-    var yesOrNo = confirm("确定要删除该学生么？");
-    if(yesOrNo){
-        $.ajax({
-            //几个参数需要注意一下
-            type: "GET",//方法类型
-            dataType: "json",//预期服务器返回的数据类型
-            url: "delete?sid="+sid ,//url
-            success: function (data) {
-                console.log(data.message);//打印服务端返回的数据(调试用)
-                if (data.result == "success") {
-                    list();
-                }
-            },
-            error : function() {
-                alert("异常！");
-            }
-        }); 
-    }
+	var sid = $(e).parent().siblings().first().text();
+	var yesOrNo = confirm("确定要删除该学生么？");
+	if(yesOrNo){
+	    $.ajax({
+	    	//几个参数需要注意一下
+	        type: "GET",//方法类型
+	        dataType: "json",//预期服务器返回的数据类型
+	        url: "delete?sid="+sid ,//url
+	        success: function (data) {
+	            console.log(data.message);//打印服务端返回的数据(调试用)
+	            if (data.result == "success") {
+	            	list();
+	            }
+	        },
+	        error : function() {
+	            alert("异常！");
+	        }
+	    });	
+	}
 }
