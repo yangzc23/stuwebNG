@@ -44,6 +44,7 @@ function edit(e){
     $.ajax({
     	//几个参数需要注意一下
         type: "GET",//方法类型
+        cache: false,
         dataType: "json",//预期服务器返回的数据类型
         url: "edit?sid="+sid ,//url
         success: function (data) {
