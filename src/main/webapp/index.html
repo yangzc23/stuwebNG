@@ -4,22 +4,12 @@
 <meta charset="UTF-8">
 <title>学生管理系统</title>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
-<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/student.js"></script>
 <style>
 #menu{
 	margin:10px;
-}
-
-#edit{
-	display:none;
-	width:60%;
-	background-color: #FFE4B5;
-	float:left;
-	position:absolute;
-	left:20%;
-	top:8%;
 }
 </style>
 </head>
@@ -36,57 +26,71 @@
 <div>
 <div id="list" class="panel panel-default"></div>
 <div id="menu">
-<button type="button" class="btn btn-default" onclick="add();">
+<button type="button" class="btn btn-primary" onclick="add();">
   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 添加
 </button>
 </div>
-<div class="panel panel-default" id="edit">
-  <!-- Default panel contents -->
-  <div class="panel-heading"><h3 id="subject" class="panel-title"></h3></div>
-  <div class="panel-body">
-	<form role="form" id="register" method="post">
-		<div class="form-group" id="first">
-			<label for="sid">学号</label> <input type="text"
-				class="form-control" id="sid" name="sid" readonly>
-		</div>
-		<div class="form-group">
-			<label for="sname">姓名</label> <input type="text"
-				class="form-control" id="sname" name="sname" placeholder="请输入姓名">
-		</div>
-		<label for="name">性別</label>
-		<div class="form-group">
-    		<label class="radio-inline">
-        		<input type="radio" name="gender" id="male" value="1" checked> 靓仔
-    		</label>
-    		<label class="radio-inline">
-        		<input type="radio" name="gender" id="female" value="0"> 美女
-    		</label>
-		</div>
-		<div class="form-group">
-			<label for="birth">生日</label>
-			<input type="date" class="form-control" id="birth" name="birth">
-		</div>    	
-		<div class="form-group">
-			<label for="photo">上传头像</label>
-			<input type="file" id="photo" name="photo">
-			<p class="help-block">请上传jpg或者png格式的文件！</p>
-		</div>
-		<div class="form-group">
-			<button type="button" class="btn btn-default" onclick="upload();">
-  				<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> 上传
-			</button>
-		</div>
-		<div hidden="hidden">
-			<input type="text" name="filePath" id="filePath" />
-		</div>
-		<div class="form-group">
-			<img width="120" height="120" src="images/default.png" id="photo2"/>
-		</div>
-	</form>
-	<button class="btn btn-default" onclick="save();">保存</button>
-	<button class="btn btn-default" onclick="cancel();">取消</button>	
-  </div>
-</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title" id="subject"></h3>
+            </div>
+            <div class="modal-body">
+				<form role="form" id="register">
+					<div class="form-group" id="first">
+						<label for="sid">学号</label> <input type="text"
+							class="form-control" id="sid" name="sid" readonly>
+					</div>
+					<div class="form-group">
+						<label for="sname">姓名</label> <input type="text"
+							class="form-control" id="sname" name="sname" placeholder="请输入姓名">
+					</div>
+					<label for="name">性別</label>
+					<div class="form-group">
+			    		<label class="radio-inline">
+			        		<input type="radio" name="gender" id="male" value="1" checked> 靓仔
+			    		</label>
+			    		<label class="radio-inline">
+			        		<input type="radio" name="gender" id="female" value="0"> 美女
+			    		</label>
+					</div>
+					<div class="form-group">
+						<label for="birth">生日</label>
+						<input type="date" class="form-control" id="birth" name="birth">
+					</div>    	
+					<div class="form-group">
+						<label for="photo">上传头像</label>
+						<input type="file" id="photo" name="photo">
+						<p class="help-block">请上传jpg或者png格式的文件！</p>
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn btn-default" onclick="upload();">
+			  				<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> 上传
+						</button>
+					</div>
+					<div hidden="hidden">
+						<input type="text" name="filePath" id="filePath" />
+					</div>
+					<div class="form-group">
+						<img width="120" height="120" src="images/default.png" id="photo2"/>
+					</div>
+				</form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" onclick="save();">保存</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+$(function() {
+    $('#edit').modal('hide');
+});
+</script>
 </div>
 </body>
 </html>

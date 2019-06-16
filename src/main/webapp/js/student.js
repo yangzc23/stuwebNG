@@ -2,7 +2,7 @@ function list(){
 	$.ajax({
 		type: "get",
 		url: "welcome",
-		cache: true,
+		cache: false,
 		async: true,
 		dataType: "json",
 		success: function(data){
@@ -30,7 +30,8 @@ function add(){
 	$("#first").hide();
 	$("#register")[0].reset();
     $("#photo2").attr("src","images/default.png");
-	$("#edit").css("display","block");
+	//$("#edit").css("display","block");
+    $('#edit').modal('show');
 }
 
 function edit(e){
@@ -59,17 +60,13 @@ function edit(e){
             	$("#birth").val(stu.birth);
             	$("#filePath").val(stu.filePath);
                 $("#photo2").attr("src",stu.filePath);
-            	$("#edit").css("display","block");
+                $('#edit').modal('show');
             }
         },
         error : function() {
             alert("异常！");
         }
     });
-}
-
-function cancel(){
-	$("#edit").css("display","none");
 }
 
 function save(){
@@ -82,9 +79,10 @@ function save(){
             success: function (data) {
                 //console.log(data);//打印服务端返回的数据(调试用)
                 if (data.result == "success") {
-                    $("#edit").css("display","none");
-                    $("#register")[0].reset();
-                    $("#photo2").attr("src","images/default.png");
+                	$('#edit').modal('hide');
+                    //$("#edit").css("display","none");
+                    //$("#register")[0].reset();
+                    //$("#photo2").attr("src","images/default.png");
                     //alert(data.message);
                     list();
                 }
