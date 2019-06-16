@@ -42,11 +42,11 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/10027900-d9dbf5ac50bd7aa7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![image.png](https://upload-images.jianshu.io/upload_images/10027900-ecff5a9065f3a48e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/10027900-485cbc2085f643e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![image.png](https://upload-images.jianshu.io/upload_images/10027900-a985fa10bac75ed9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/10027900-94f6705a59ac0b89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![image.png](https://upload-images.jianshu.io/upload_images/10027900-699c2905e14b4882.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/10027900-518427d85b1d0499.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 创建学生表
 ```
