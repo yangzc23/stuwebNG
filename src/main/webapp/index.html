@@ -4,9 +4,26 @@
 <meta charset="UTF-8">
 <title>学生管理系统</title>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
 <script src="js/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/student.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.form_date').datetimepicker({
+		  language: 'zh-CN',
+		  weekStart: 1,
+		  todayBtn: 1,
+		  autoclose: 1,
+		  todayHighlight: 1,
+		  startView: 2,
+		  minView: 2,
+		  forceParse: 0,
+		 });
+	})
+</script>
 <style>
 #menu{
 	margin:10px;
@@ -57,10 +74,16 @@
 			        		<input type="radio" name="gender" id="female" value="0"> 美女
 			    		</label>
 					</div>
-					<div class="form-group">
-						<label for="birth">生日</label>
-						<input type="date" class="form-control" id="birth" name="birth">
-					</div>    	
+					<label for="birth">生日</label>
+					<div class="input-group date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="birth" data-link-format="yyyy-mm-dd">
+						<input name="birth" id="birth" class="form-control" type="text" value="" readonly>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-remove"></span>
+						</span>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>  	
 					<div class="form-group">
 						<label for="photo">上传头像</label>
 						<input type="file" id="photo" name="photo">

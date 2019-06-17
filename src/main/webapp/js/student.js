@@ -31,6 +31,7 @@ function add(){
 	$("#register")[0].reset();
     $("#photo2").attr("src","images/default.png");
 	//$("#edit").css("display","block");
+    $('.form_date').datetimepicker("setDate", new Date()); 
     $('#edit').modal('show');
 }
 
