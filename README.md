@@ -65,7 +65,7 @@ PHOTO_URL VARCHAR(50)	--照片路径
 
 访问网站首页报404错误
 
-![image.png](https://upload-images.jianshu.io/upload_images/10027900-e3a16642a128e4e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/10027900-69475303a7dcaf03.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **分析：**
 
