@@ -74,3 +74,12 @@ web.xml中设置metadata-complete="true"，会在启动时不扫描注解（anno
 **解决办法：**
 
 设置metadata-complete="false"
+
+**微信扫一扫关注公众号**
+
+![image.png](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xMDAyNzkwMC0yMzM2ODlhNjQ1YTM2YTEyLnBuZw?x-oss-process=image/format,png#pic_center)
+
+**点击链接加入群聊**
+
+[https://jq.qq.com/?_wv=1027&k=5eVEhfN](https://jq.qq.com/?_wv=1027&k=5eVEhfN)
+软件测试学习交流QQ群号：**511619105**
